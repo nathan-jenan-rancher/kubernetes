@@ -42,7 +42,6 @@ func GetUnixServerPath(socketName string, paths ...string) string {
 	return serverPath
 }
 
-
 // Client is an HTTP REST wrapper. Use one of Get/Post/Put/Delete to get a request
 // object.
 type Client struct {

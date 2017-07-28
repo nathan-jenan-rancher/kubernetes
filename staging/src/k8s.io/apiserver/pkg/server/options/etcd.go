@@ -52,6 +52,7 @@ var storageTypes = sets.NewString(
 	storagebackend.StorageTypeUnset,
 	storagebackend.StorageTypeETCD2,
 	storagebackend.StorageTypeETCD3,
+	storagebackend.StorageTypeRDBMS,
 )
 
 func NewEtcdOptions(backendConfig *storagebackend.Config) *EtcdOptions {
@@ -67,9 +68,9 @@ func NewEtcdOptions(backendConfig *storagebackend.Config) *EtcdOptions {
 
 func (s *EtcdOptions) Validate() []error {
 	allErrors := []error{}
-	if len(s.StorageConfig.ServerList) == 0 {
-		allErrors = append(allErrors, fmt.Errorf("--etcd-servers must be specified"))
-	}
+	//if len(s.StorageConfig.ServerList) == 0 {
+	//	allErrors = append(allErrors, fmt.Errorf("--etcd-servers must be specified"))
+	//}
 
 	if !storageTypes.Has(s.StorageConfig.Type) {
 		allErrors = append(allErrors, fmt.Errorf("--storage-backend invalid, must be 'etcd3' or 'etcd2'. If not specified, it will default to 'etcd3'"))

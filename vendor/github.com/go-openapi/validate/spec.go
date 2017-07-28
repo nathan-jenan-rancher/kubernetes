@@ -170,7 +170,7 @@ func (s *SpecValidator) validateDuplicatePropertyNames() *Result {
 		}
 
 		knownanc := map[string]struct{}{
-			"#/definitions/" + k: struct{}{},
+			"#/definitions/" + k: {},
 		}
 
 		ancs := s.validateCircularAncestry(k, sch, knownanc)

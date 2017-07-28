@@ -13,7 +13,6 @@ var (
 	IONotSupported       = &ioNotSupported{}
 )
 
-
 type blockNotSupported struct{}
 
 func (b *blockNotSupported) Attach(volumeID string) (string, error) {

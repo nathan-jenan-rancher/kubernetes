@@ -29,6 +29,8 @@ type DestroyFunc func()
 // Create creates a storage backend based on given config.
 func Create(c storagebackend.Config) (storage.Interface, DestroyFunc, error) {
 	switch c.Type {
+	case storagebackend.StorageTypeRDBMS:
+		return newRDBMSStorage(c)
 	case storagebackend.StorageTypeETCD2:
 		return newETCD2Storage(c)
 	case storagebackend.StorageTypeUnset, storagebackend.StorageTypeETCD3:

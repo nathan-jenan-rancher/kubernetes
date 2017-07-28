@@ -40,9 +40,10 @@ const (
 
 // Api client-server Constants
 const (
-	OsdVolumePath = "osd-volumes"
+	OsdVolumePath   = "osd-volumes"
 	OsdSnapshotPath = "osd-snapshot"
 )
+
 // Node describes the state of a node.
 // It includes the current physical state (CPU, memory, storage, network usage) as
 // well as the containers running on the system.

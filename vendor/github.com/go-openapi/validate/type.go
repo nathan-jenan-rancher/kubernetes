@@ -33,13 +33,13 @@ type typeValidator struct {
 }
 
 var jsonTypeNames = map[string]struct{}{
-	"array":   struct{}{},
-	"boolean": struct{}{},
-	"integer": struct{}{},
-	"null":    struct{}{},
-	"number":  struct{}{},
-	"object":  struct{}{},
-	"string":  struct{}{},
+	"array":   {},
+	"boolean": {},
+	"integer": {},
+	"null":    {},
+	"number":  {},
+	"object":  {},
+	"string":  {},
 }
 
 func (t *typeValidator) schemaInfoForType(data interface{}) (string, string) {

@@ -143,7 +143,7 @@ func DescribeMap(in interface{}, indent string) string {
 	m, ok := in.(map[string]interface{})
 	if ok {
 		keys := make([]string, 0)
-		for k, _ := range m {
+		for k := range m {
 			keys = append(keys, k)
 		}
 		sort.Strings(keys)
